@@ -14,9 +14,7 @@ import FilterOption from './FilterOption'
 
 const NETWORKS = [
   SupportedChainId.MAINNET,
-  SupportedChainId.ARBITRUM_ONE,
-  SupportedChainId.POLYGON,
-  SupportedChainId.OPTIMISM,
+  SupportedChainId.ETHW
 ]
 
 const InternalMenuItem = styled.div`

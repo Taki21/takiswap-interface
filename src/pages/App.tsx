@@ -33,8 +33,6 @@ import Earn from './Earn'
 import Manage from './Earn/Manage'
 import MigrateV2 from './MigrateV2'
 import MigrateV2Pair from './MigrateV2/MigrateV2Pair'
-import Pool from './Pool'
-import { PositionPage } from './Pool/PositionPage'
 import PoolV2 from './Pool/v2'
 import PoolFinder from './PoolFinder'
 import RemoveLiquidity from './RemoveLiquidity'
@@ -198,10 +196,8 @@ export default function App() {
                   <Route path="swap/:outputCurrency" element={<RedirectToSwap />} />
                   <Route path="swap" element={<Swap />} />
 
-                  <Route path="pool/v2/find" element={<PoolFinder />} />
-                  <Route path="pool/v2" element={<PoolV2 />} />
-                  <Route path="pool" element={<Pool />} />
-                  <Route path="pool/:tokenId" element={<PositionPage />} />
+                  <Route path="pool/find" element={<PoolFinder />} />
+                  <Route path="pool/" element={<PoolV2 />} />
 
                   <Route path="add/v2" element={<RedirectDuplicateTokenIdsV2 />}>
                     <Route path=":currencyIdA" />

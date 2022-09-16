@@ -50,10 +50,7 @@ const ChainDetails = ({ children }: { children: ReactNode }) => <Row>{children}<
 
 const NETWORK_SELECTOR_CHAINS = [
   SupportedChainId.MAINNET,
-  SupportedChainId.POLYGON,
-  SupportedChainId.OPTIMISM,
-  SupportedChainId.ARBITRUM_ONE,
-  SupportedChainId.CELO,
+  SupportedChainId.ETHW
 ]
 
 interface ChainSwitcherProps {

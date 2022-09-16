@@ -309,10 +309,6 @@ export default function Header() {
             <Trans>Vote</Trans>
           </StyledNavLink>
         )}
-        <StyledExternalLink id={`charts-nav-link`} href={infoLink}>
-          <Trans>Charts</Trans>
-          <sup>↗</sup>
-        </StyledExternalLink>
       </HeaderLinks>
 
       <HeaderControls>
