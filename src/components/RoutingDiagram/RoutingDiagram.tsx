@@ -37,6 +37,11 @@ const RouteRow = styled(Row)`
 const PoolBadge = styled(Badge)`
   display: flex;
   padding: 4px 4px;
+  background: rgba(128, 128, 128, 0.69);
+  border-radius: 8px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
 `
 
 const DottedLine = styled.div`
@@ -55,8 +60,6 @@ const DotColor = styled(DotLine)`
 `
 
 const OpaqueBadge = styled(Badge)`
-  background-color: ${({ theme }) => theme.deprecated_bg2};
-  border-radius: 8px;
   display: grid;
   font-size: 12px;
   grid-gap: 4px;
@@ -64,11 +67,19 @@ const OpaqueBadge = styled(Badge)`
   justify-content: start;
   padding: 4px 6px 4px 4px;
   z-index: ${Z_INDEX.sticky};
+  background: rgba(128,128,128, 0.69);
+  border-radius: 8px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
 `
 
 const ProtocolBadge = styled(Badge)`
-  background-color: ${({ theme }) => theme.deprecated_bg3};
-  border-radius: 4px;
+background: rgba(32, 32, 32, 0.32);
+border-radius: 8px;
+box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+backdrop-filter: blur(20px);
+-webkit-backdrop-filter: blur(20px);
   color: ${({ theme }) => theme.deprecated_text2};
   font-size: 10px;
   padding: 2px 4px;

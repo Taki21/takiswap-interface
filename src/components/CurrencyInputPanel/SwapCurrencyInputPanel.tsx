@@ -29,13 +29,22 @@ import { FiatValue } from './FiatValue'
 const InputPanel = styled.div<{ hideInput?: boolean; redesignFlag: boolean }>`
   ${({ theme }) => theme.flexColumnNoWrap}
   position: relative;
-  border-radius: ${({ hideInput }) => (hideInput ? '16px' : '20px')};
-  background-color: ${({ theme, redesignFlag, hideInput }) =>
-    redesignFlag ? 'transparent' : hideInput ? 'transparent' : theme.deprecated_bg2};
+  background: rgba(32, 32, 32, 0.08);
+border-radius: 16px;
+box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+backdrop-filter: blur(9.8px);
+-webkit-backdrop-filter: blur(9.8px);
+
+:focus,
+    :hover {
+      background: rgba(64, 64, 64, 0.08);
+      transition: all 200ms ease
+    }
   z-index: 1;
   width: ${({ hideInput }) => (hideInput ? '100%' : 'initial')};
   transition: height 1s ease;
   will-change: height;
+  transition: all 200ms ease
 `
 
 const FixedContainer = styled.div<{ redesignFlag: boolean }>`
@@ -53,17 +62,12 @@ const FixedContainer = styled.div<{ redesignFlag: boolean }>`
 const Container = styled.div<{ hideInput: boolean; disabled: boolean; redesignFlag: boolean }>`
   min-height: ${({ redesignFlag }) => redesignFlag && '69px'};
   border-radius: ${({ hideInput }) => (hideInput ? '16px' : '20px')};
-  border: 1px solid ${({ theme, redesignFlag }) => (redesignFlag ? 'transparent' : theme.deprecated_bg0)};
-  background-color: ${({ theme, redesignFlag }) => (redesignFlag ? 'transparent' : theme.deprecated_bg1)};
+  background-color: #ffffff
   width: ${({ hideInput }) => (hideInput ? '100%' : 'initial')};
   ${({ theme, hideInput, disabled, redesignFlag }) =>
     !redesignFlag &&
     !disabled &&
     `
-    :focus,
-    :hover {
-      border: 1px solid ${hideInput ? ' transparent' : theme.deprecated_bg3};
-    }
   `}
 `
 
@@ -112,16 +116,15 @@ const CurrencySelect = styled(ButtonGray)<{
   visibility: ${({ visible }) => (visible ? 'visible' : 'hidden')};
 `
 const InputCurrencySelect = styled(CurrencySelect)<{ redesignFlag: boolean }>`
-  background-color: ${({ theme, selected, redesignFlag }) =>
-    redesignFlag && (selected ? theme.backgroundModule : theme.accentAction)};
+  background: rgba(32, 32, 32, 0.2);
+  border-radius: 8px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(20px);
+  transition: all 200ms ease;
+  -webkit-backdrop-filter: blur(20px);
   :focus,
   :hover {
-    background-color: ${({ selected, theme, redesignFlag }) =>
-      selected
-        ? redesignFlag
-          ? theme.backgroundInteractive
-          : theme.deprecated_bg3
-        : darken(0.05, theme.deprecated_primary1)};
+    background-color: rgba(32, 32, 32, 0.4);
   }
 `
 
@@ -219,6 +222,7 @@ const StyledNumericalInput = styled(NumericalInput)<{ $loading: boolean; redesig
   text-align: left;
   font-variant: ${({ redesignFlag }) => redesignFlag && 'small-caps'};
   font-feature-settings: ${({ redesignFlag }) => redesignFlag && 'pnum on, lnum on'};
+  background: transparent;
 `
 
 interface SwapCurrencyInputPanelProps {

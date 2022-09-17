@@ -43,7 +43,7 @@ const StyledCard = styled(OutlineCard)<{ redesignFlag: boolean }>`
 const StyledHeaderRow = styled(RowBetween)<{ disabled: boolean; open: boolean; redesignFlag: boolean }>`
   padding: ${({ redesignFlag }) => (redesignFlag ? '8px 0px 0px 0px' : '4px 8px')};
   background-color: ${({ open, theme, redesignFlag }) =>
-    open && !redesignFlag ? theme.deprecated_bg1 : 'transparent'};
+    open && !redesignFlag ? 'rgba(0,0,0,0.05)' : 'rgba(0,0,0,0.1)'};
   align-items: center;
   border-top: 1px solid ${({ theme, redesignFlag }) => (redesignFlag ? theme.backgroundOutline : 'transparent')};
   margin-top: ${({ redesignFlag }) => redesignFlag && '8px'};

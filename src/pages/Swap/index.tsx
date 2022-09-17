@@ -96,6 +96,7 @@ const BottomWrapper = styled.div<{ redesignFlag: boolean }>`
       font-size: 14px;
       line-height: 20px;
       font-weight: 500;
+      
     `}
 `
 const TopInputWrapper = styled.div<{ redesignFlag: boolean }>`

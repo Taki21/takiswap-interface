@@ -26,9 +26,7 @@ import { AutoRouterLabel, AutoRouterLogo } from './RouterLabel'
 const Wrapper = styled(AutoColumn)<{ darkMode?: boolean; fixedOpen?: boolean; redesignFlag: boolean }>`
   padding: ${({ fixedOpen }) => (fixedOpen ? '12px' : '12px 8px 12px 12px')};
   border-radius: 16px;
-  border: 1px solid
-    ${({ theme, fixedOpen, redesignFlag }) =>
-      fixedOpen ? 'transparent' : redesignFlag ? theme.backgroundOutline : theme.deprecated_bg2};
+  border: 1px solid #40444f;
   cursor: pointer;
 `
 

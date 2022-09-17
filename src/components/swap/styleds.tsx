@@ -34,11 +34,15 @@ export const SwapWrapper = styled.main<{ margin?: string; maxWidth?: string; red
   box-shadow: ${({ redesignFlag }) =>
     !redesignFlag &&
     '0px 0px 1px rgba(0, 0, 0, 0.01), 0px 4px 8px rgba(0, 0, 0, 0.04), 0px 16px 24px rgba(0, 0, 0, 0.04), 0px 24px 32px rgba(0, 0, 0, 0.01)'};
+  background: rgba(0, 0, 0, 0.08);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(9.8px);
+  -webkit-backdrop-filter: blur(9.8px);
 `
 
 export const ArrowWrapper = styled.div<{ clickable: boolean; redesignFlag: boolean }>`
   padding: 4px;
-  border-radius: 12px;
   height: ${({ redesignFlag }) => (redesignFlag ? '40px' : '32px')};
   width: ${({ redesignFlag }) => (redesignFlag ? '40px' : '32px')};
   position: relative;
@@ -46,9 +50,12 @@ export const ArrowWrapper = styled.div<{ clickable: boolean; redesignFlag: boole
   margin-bottom: ${({ redesignFlag }) => (redesignFlag ? '-18px' : '-14px')};
   left: calc(50% - 16px);
   /* transform: rotate(90deg); */
-  background-color: ${({ theme, redesignFlag }) => (redesignFlag ? theme.backgroundSurface : theme.deprecated_bg1)};
-  border: 4px solid;
-  border-color: ${({ theme, redesignFlag }) => (redesignFlag ? theme.backgroundModule : theme.deprecated_bg0)};
+  background: rgba(128, 128, 128, 0.01);
+border-radius: 8px;
+box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+backdrop-filter: blur(9.8px);
+-webkit-backdrop-filter: blur(9.8px);
+  border: 4px solid rgba(0, 0, 0, 0);
 
   z-index: 2;
   ${({ clickable }) =>

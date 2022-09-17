@@ -20,7 +20,11 @@ const StyledDialogOverlay = styled(AnimatedDialogOverlay)<{ redesignFlag?: boole
     align-items: center;
     justify-content: center;
 
-    background-color: ${({ theme, redesignFlag }) => (redesignFlag ? theme.backgroundScrim : theme.deprecated_modalBG)};
+    background: rgba(32, 32, 32, 0.32);
+    border-radius: 8px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
   }
 `
 
@@ -36,8 +40,11 @@ const StyledDialogContent = styled(({ minHeight, maxHeight, mobile, isOpen, rede
 
   &[data-reach-dialog-content] {
     margin: 0 0 2rem 0;
-    background-color: ${({ theme }) => theme.deprecated_bg0};
-    border: 1px solid ${({ theme }) => theme.deprecated_bg1};
+    background: rgba(48, 48, 48, 0.69);
+    border-radius: 8px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
     box-shadow: ${({ theme, redesignFlag }) =>
       redesignFlag ? theme.deepShadow : `0 4px 8px 0 ${transparentize(0.95, theme.shadow1)}`};
     padding: 0px;

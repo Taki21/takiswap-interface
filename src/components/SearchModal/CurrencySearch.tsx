@@ -31,7 +31,6 @@ import ImportRow from './ImportRow'
 import { PaddedColumn, SearchInput, Separator } from './styleds'
 
 const ContentWrapper = styled(Column)<{ redesignFlag?: boolean }>`
-  background-color: ${({ theme, redesignFlag }) => redesignFlag && theme.backgroundSurface};
   width: 100%;
   flex: 1 1;
   position: relative;
@@ -43,7 +42,11 @@ const Footer = styled.div`
   padding: 20px;
   border-top-left-radius: 0;
   border-top-right-radius: 0;
-  background-color: ${({ theme }) => theme.deprecated_bg1};
+  background: rgba(32, 32, 32, 0.32);
+  border-radius: 8px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
   border-top: 1px solid ${({ theme }) => theme.deprecated_bg2};
 `
 
