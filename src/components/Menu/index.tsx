@@ -14,6 +14,8 @@ import {
   FileText,
   Flag,
   Info,
+  Moon,
+  Sun
 } from 'react-feather'
 import { Link } from 'react-router-dom'
 import { useDarkModeManager } from 'state/user/hooks'
@@ -237,13 +239,17 @@ export default function Menu() {
               default:
                 return (
                   <MenuFlyout>
-                    <MenuItem href="https://uniswap.org/">
+                    <MenuItem href="https://app.takiswap.org/">
                       <div>
                         <Trans>About</Trans>
                       </div>
                       <Info opacity={0.6} size={16} />
                     </MenuItem>
-                    <MenuItem href="https://docs.uniswap.org/">
+                    <ToggleMenuItem onClick={() => toggleDarkMode()}>
+                      <div>{darkMode ? <Trans>Light Theme</Trans> : <Trans>Dark Theme</Trans>}</div>
+                      {darkMode ? <Sun opacity={0.6} size={16} /> : <Moon opacity={0.6} size={16} />}
+                    </ToggleMenuItem>
+                    <MenuItem href="https://app.takiswap.org/">
                       <div>
                         <Trans>Docs</Trans>
                       </div>
