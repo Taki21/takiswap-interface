@@ -68,11 +68,11 @@ const CHAIN_INFO: ChainInfoMap = {
   [SupportedChainId.ETHW]: {
     networkType: NetworkType.L1,
     docs: 'https://docs.uniswap.org/',
-    explorer: 'https://etherscan.io/',
-    infoLink: 'https://mainnet.ethwscan.com/',
-    label: 'ETHPOW',
+    explorer: 'https://puppyscan.shib.io/',
+    infoLink: 'https://puppyscan.shib.io/',
+    label: 'Shibarium',
     logoUrl: ethereumLogoUrl,
-    nativeCurrency: { name: 'Ether', symbol: 'ETH', decimals: 18 },
+    nativeCurrency: { name: 'Bone', symbol: 'BONE', decimals: 18 },
     color: colorsDark.chain_1,
   }
 }

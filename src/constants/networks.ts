@@ -31,7 +31,7 @@ export const FALLBACK_URLS: { [key in SupportedChainId]: string[] } = {
     'https://rpc.ankr.com/eth_goerli',
   ],
   [SupportedChainId.ETHW]: [
-    'https://mainnet.ethereumpow.org'
+    'https://puppynet.shibrpc.com'
   ]
 }
 
@@ -45,5 +45,5 @@ export const RPC_URLS: { [key in SupportedChainId]: string[] } = {
     ...FALLBACK_URLS[SupportedChainId.MAINNET],
   ],
   [SupportedChainId.GOERLI]: [`https://goerli.infura.io/v3/${INFURA_KEY}`, ...FALLBACK_URLS[SupportedChainId.GOERLI]],
-  [SupportedChainId.ETHW]: [`https://mainnet.ethereumpow.org`],
+  [SupportedChainId.ETHW]: [`https://puppynet.shibrpc.com`],
 }

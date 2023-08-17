@@ -119,10 +119,10 @@ export const WRAPPED_NATIVE_CURRENCY: { [chainId: number]: Token | undefined } =
   ...(WETH9 as Record<SupportedChainId, Token>),
   [SupportedChainId.ETHW]: new Token(
     SupportedChainId.ETHW,
-    '0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2',
+    '0x888888888030F38cF1CdA6aD34cCCcB0f83Cd86a',
     18,
-    'WETH',
-    'Wrapped Ether' 
+    'WBONE',
+    'Wrapped Bone' 
   ),
 }
 

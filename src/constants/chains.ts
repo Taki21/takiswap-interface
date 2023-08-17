@@ -4,13 +4,13 @@
 export enum SupportedChainId {
   MAINNET = 1,
   GOERLI = 5,
-  ETHW = 10001,
+  ETHW = 719,
 }
 
 export const CHAIN_IDS_TO_NAMES = {
   [SupportedChainId.MAINNET]: 'mainnet',
   [SupportedChainId.GOERLI]: 'goerli',
-  [SupportedChainId.ETHW]: 'ethw'
+  [SupportedChainId.ETHW]: 'puppynet'
 }
 
 /**

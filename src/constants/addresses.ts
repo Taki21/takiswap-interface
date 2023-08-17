@@ -1,4 +1,4 @@
-import { FACTORY_ADDRESS as V2_FACTORY_ADDRESS } from '@uniswap/v2-sdk'
+//import { FACTORY_ADDRESS as V2_FACTORY_ADDRESS } from '@uniswap/v2-sdk'
 
 import { constructSameAddressMap } from '../utils/constructSameAddressMap'
 import { SupportedChainId } from './chains'
@@ -7,8 +7,8 @@ type AddressMap = { [chainId: number]: string }
 
 export const UNI_ADDRESS: AddressMap = constructSameAddressMap('0x1f9840a85d5aF5bf1D1762F925BDADdC4201F984')
 
-export const V2_FACTORY_ADDRESSES: AddressMap = constructSameAddressMap(V2_FACTORY_ADDRESS)
-export const V2_ROUTER_ADDRESS: AddressMap = constructSameAddressMap('0x7a250d5630B4cF539739dF2C5dAcb4c659F2488D')
+export const V2_FACTORY_ADDRESSES: AddressMap = constructSameAddressMap('0x57dF8cd497Cf8f744Ac3f9584a067eEd62A7d802')
+export const V2_ROUTER_ADDRESS: AddressMap = constructSameAddressMap('0xf86B21Df5A4488caA78d1Ff54D9471230E49ba5e')
 
 /* V3 Contract Addresses */
 export const V3_CORE_FACTORY_ADDRESSES: AddressMap = {
@@ -18,11 +18,11 @@ export const V3_MIGRATOR_ADDRESSES: AddressMap = {
 }
 
 export const MULTICALL_ADDRESS: AddressMap = {
-  ...constructSameAddressMap('0x1F98415757620B543A52E61c46B32eB19261F984')
+  ...constructSameAddressMap('0x63c21a84D242CA0D7E0a6e8660A7298e6596D77c')
 }
 
 export const SWAP_ROUTER_ADDRESSES: AddressMap = {
-  ...constructSameAddressMap('0x68b3465833fb72A70ecDF485E0e4C7bD8665Fc45', []),
+  ...constructSameAddressMap('0xF31f0b67D595ad7e8a38A8f08Fee6835420c933F', []),
 }
 
 /**

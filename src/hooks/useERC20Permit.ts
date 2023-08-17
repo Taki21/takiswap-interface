@@ -38,7 +38,7 @@ const PERMITTABLE_TOKENS: {
     [DAI.address]: { type: PermitType.ALLOWED, name: 'Dai Stablecoin', version: '1' },
     [UNI[1].address]: { type: PermitType.AMOUNT, name: 'Uniswap' },
   },
-  10001: {},
+  719: {},
   5: {
     [UNI[5].address]: { type: PermitType.AMOUNT, name: 'Uniswap' },
   },
